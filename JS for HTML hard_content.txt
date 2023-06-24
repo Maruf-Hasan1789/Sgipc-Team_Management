@@ -1,0 +1,5 @@
+let link = document.createElement("a");
+link.href = URL.createObjectURL(new Blob([document.getElementsByTagName('html')[0].innerHTML], { type: 'text/html' }));
+link.download = "rendered.html";
+link.click();
+URL.revokeObjectURL(link.href);

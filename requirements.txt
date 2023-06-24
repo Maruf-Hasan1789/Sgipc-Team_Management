@@ -1,0 +1,16 @@
+django>=4.0.0
+djangorestframework
+beautifulsoup4==4.5.3
+html-table-extractor
+pandas
+lxml
+pyyaml
+selenium
+requests
+
+joblib==1.1.0
+scipy==1.8.1
+setuptools==61.2.0
+numpy==1.23.0
+pandas==1.4.3
+scikit_learn==1.1.1

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'teamranking/teamranking.css' %}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="heading">Team Standings </h1>
+  <table class="center">
+    <tr>
+      <th>Team Name</th>
+      <th>Rating</th>
+      <th>Total Contests</th>
+      <th>Rating Change</th>
+    </tr>
+    {% for team in all_teams %}
+    <tr>
+      <td>{{team.team_name}}</td>
+      <td>{{team.rating}}</td>
+      <td>{{team.attended_contests}}</td>
+      <td>{{ team.rating_change }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>
