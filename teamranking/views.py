@@ -13,5 +13,6 @@ class Standings(ListView):
     ordering=['-rating']
     context_object_name='all_teams'
     
+    
 
 

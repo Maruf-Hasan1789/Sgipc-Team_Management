@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+
+<style>
+    @import url('https://fonts.cdnfonts.com/css/old-english-five');
+</style>
+<link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'teamranking/teamranking.css' %}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Vjudge Standings </h1>
+
+
+    <form action="/vjudgestandings">
+        <label for="Contest Name">Chose a contest below</label>
+        <select name="contest_name" id="contest_name">
+            {% for query in querysets %}
+            <option value="{{ query.contest_name}}">{{ query.contest_name}}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <table class="center">
+        <tr>
+            <th>Rank</th>
+            <th>Team Name</th>
+            <th>Score</th>
+            <th>Penalty</th>
+        </tr>
+        {% for team in all_teams %}
+        <tr>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

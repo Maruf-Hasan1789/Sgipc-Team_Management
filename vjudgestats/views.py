@@ -4,11 +4,12 @@ import csv
 import pandas as pd 
 from django.views import View
 import numpy as np
+import json
 
 # Create your views here.
 from teamranking.models import teamInformation
 
-from .models import recentStandings
+from .models import VjudgeStandings
 from teamranking.models import teamInformation
 
 
@@ -30,7 +31,7 @@ def update_rating(team_list):
     
     teamHiddenRating={}
     teamPublicRating={}
-    attended_contests=1
+    #attended_contests=1
 
     
 
@@ -42,8 +43,8 @@ def update_rating(team_list):
         teamHiddenRating[team_list[i][0]]=hidden_rating
         rating=queryset.rating
         teamPublicRating[team_list[i][0]]=rating
-        if(i==0):
-            attended_contests+=queryset.attended_contests
+        #if(i==0):
+        #   attended_contests+=queryset.attended_contests
         #print(team_list[i][0]," ",teamHiddenRating[team_list[i][0]])
 
 
@@ -107,14 +108,16 @@ def update_rating(team_list):
         queryset.hidden_rating=teamHiddenRating[team_name]
         queryset.rating_change=teamPublicRating[team_name]-queryset.rating
         queryset.rating=teamPublicRating[team_name]
-        queryset.attended_contests=attended_contests
-        print(team_name," ",attended_contests)
+        queryset.attended_contests+=1
+        print(team_name," ",queryset.attended_contests)
         queryset.save()
 
 
 
 
-
+def np_encoder(object):
+    if isinstance(object, np.generic):
+        return object.item()
 
 
 class FileUpload(View):
@@ -125,8 +128,9 @@ class FileUpload(View):
     def get(self,request):
         return render(request,'vjudgestats/file_upload.html')
     def post(self,request):
+        #print(request.POST['ContestName'])
+        contestName=request.POST['ContestName']
         csv_file=request.FILES['uploaded_csv_files']
-
         df=pd.read_csv(csv_file,on_bad_lines="skip")
         queryset=teamInformation.objects.all()
         team_list=[]
@@ -147,42 +151,16 @@ class FileUpload(View):
                 #update_rating(team_name,df['Rank'][index],df['Score'][index],df['Penalty'][index])
 
 
-        
-
         update_rating(team_list)
-
-            
-        """
-        for query in queryset:
-            team_list.append(query.team_name)
-        final_list=[]
-        
-        for index in df.index:
-            participated_team=df['Team Name'][index]
-            for team in team_list:
-                temp_list=[]
-                flag=0
-                if team in participated_team:
-                    flag=1
-                    #print(team)
-                    temp_list.append(team)
-                    temp_list.append(df['Rank'][index])
-                    temp_list.append(df['Score'][index])
-                    temp_list.append(df['Penalty'][index])
-                if flag:
-                    final_list.append(temp_list)
-                    break
-
-        for team in final_list:
-                dataModel=recentStandings()
-                dataModel.team_name=team[0]
-                dataModel.rank=team[1]
-                dataModel.score=team[2]
-                dataModel.penalty=team[3]
-                dataModel.save()
-        """
+        Standings=VjudgeStandings()
+        Standings.contest_name=contestName
+        Standings.contest_details=json.dumps(team_list,default=np_encoder)
+        print(Standings.contest_details)
+        Standings.save()
         return HttpResponseRedirect('http://127.0.0.1:8000/')
     
 
-def recentconteststandings(request):
-    return render(request,"teamranking/standings.html")
+def vjudgeContestStandings(request):
+    queryset=VjudgeStandings.objects.all()
+    print(queryset[0].contest_details)
+    return render(request,"vjudgestats/vjudge_contest_standings.html",{"querysets":queryset})

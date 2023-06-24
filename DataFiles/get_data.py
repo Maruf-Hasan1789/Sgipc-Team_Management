@@ -7,19 +7,8 @@ import collections
 
 
 
-import os
-import django
-
-# Set the Django settings module
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "teammanagement.settings")
-
-# Initialize Django
-django.setup()
 
 
-
-
-from teamranking.models import teamInformation
 
 
 
@@ -27,7 +16,7 @@ from teamranking.models import teamInformation
 
 collections.Callable = collections.abc.Callable
 
-filename = open('ICPC61 (1).html', 'r')
+filename = open('DataFiles\contest_html\ICPC60.html', 'r')
 soup = BeautifulSoup(filename, "html.parser")
 extractor = Extractor(soup, id_='contest-rank-table')
 extractor.parse()
@@ -73,6 +62,6 @@ df = pd.DataFrame(mylist, columns=['Rank', 'Team Name', 'Score', 'Penalty'])
 df[['Score', 'Penalty']] = df[['Score', 'Penalty']].apply(pd.to_numeric)
 
 
-#print(teamInformation)
+#print(df)
 
-#df.to_csv('rating_csv_files\ICPC_61.csv')
+df.to_csv('DataFiles/rating_csv_files/ICPC_60.csv')

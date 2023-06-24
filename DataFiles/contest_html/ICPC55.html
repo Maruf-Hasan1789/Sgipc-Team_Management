@@ -1,0 +1,1448 @@
+<link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Online Judge, vjudge, OJ, Virtual Judge, Replay Contest, ICPC, OnlineJudge, JudgeOnline, Coding, Algorithm, POJ, ZOJ, UVALive, SGU, URAL, HUST, SPOJ, HDU, HYSBZ, UVA, CodeForces, Z-Trening, Aizu, LightOJ, UESTC, NBUT, FZU, CSU, SCU, ACdream, CodeChef, OpenJudge, Kattis, HihoCoder, HIT, HRBUST, EIJudge, AtCoder, HackerRank, 51Nod">
+<meta name="author" content="chaoshxxu">
+<meta name="robots" content="index, follow">
+
+
+    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202306160901/reactive_library_fy2021.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://partner.googleadservices.com/gampad/cookie.js?domain=vjudge.net&amp;callback=_gfp_s_&amp;client=ca-pub-9098591903020457&amp;cookie=ID%3D92048a4a101b3e05-22cb7da994e10076%3AT%3D1687016061%3ART%3D1687569443%3AS%3DALNI_MZ3YHbAkOH-5_WtW_7A1bGZy6r3FA&amp;gpic=UID%3D00000c50c6007f93%3AT%3D1687016061%3ART%3D1687569443%3AS%3DALNI_MZ5GV9eMJsv1kAVM37eEWGQxKEUkQ"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-13231844-2&amp;l=dataLayer&amp;cx=c"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202306160901/show_ads_impl_fy2021.js" id="google_shimpl"></script><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9098591903020457" crossorigin="anonymous" data-checked-head="true"></script>
+
+
+    <title>ICPC Collaborative Contest - 55 - Virtual Judge</title>
+
+    <meta property="og:url" content="https://vjudge.net/contest/545548">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ICPC Collaborative Contest - 55 - Virtual Judge">
+    <meta property="og:description" content="Contest [ICPC Collaborative Contest - 55] in Virtual Judge">
+<script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/34f42ee100b9a7369988.js"></script><script defer="" src="/static/bundle/eaca2e6abbe57346b0b3.js"></script><script defer="" src="/static/bundle/b5e0c5fd0ef6edb4ef56.js"></script><script defer="" src="/static/bundle/9097b2bfe44a200c5ac8.js"></script><script defer="" src="/static/bundle/5b3de3601bb4453d666c.js"></script><script defer="" src="/static/bundle/b8f55e77304573f977fe.js"></script><script defer="" src="/static/bundle/59be812ed95d085f4e81.js"></script><script defer="" src="/static/bundle/85ca82003e01f7011d2e.js"></script><link href="/static/bundle/ccab0ffb75fc3564ac8e.css" rel="stylesheet"><link href="/static/bundle/ef4cd489859d69799478.css" rel="stylesheet"><meta http-equiv="origin-trial" content="A7CQXglZzTrThjGTBEn1rWTxHOEtkWivwzgea+NjyardrwlieSjVuyG44PkYgIPGs8Q9svD8sF3Yedn0BBBjXAkAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A3vKT9yxRPjmXN3DpIiz58f5JykcWHjUo/W7hvmtjgh9jPpQgem9VbADiNovG8NkO6mRmk70Kex8/KUqAYWVWAEAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A4A26Ymj79UVY7C7JGUS4BG1s7MdcDokAQf/RP0paks+RoTYbXHxceT/5L4iKcsleFCngi75YfNRGW2+SpVv1ggAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjk1MTY3OTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=vjudge.net" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=vjudge.net"></script></head>
+
+<body aria-hidden="false">
+<script defer="" src="/static/bundle/31d6cfe0d16ae931b73c.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-dark bg-inverse" id="top-nav">
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive"></button>
+    <div class="collapse navbar-toggleable-sm" id="navbarResponsive">
+        <a class="navbar-brand" href="/">
+            <img src="/static/bundle/11b24ab2156955d8f3fa.ico" height="30">
+            Home
+        </a>
+        <ul class="nav navbar-nav">
+            <li class="nav-item" id="nav-problem">
+                <a class="nav-link" href="/problem">Problem</a>
+            </li>
+            <li class="nav-item" id="nav-status">
+                <a class="nav-link" href="/status">Status</a>
+            </li>
+            <li class="nav-item active" id="nav-contest">
+                <a class="nav-link" href="/contest">Contest</a>
+            </li>
+            <li class="nav-item" id="nav-workbook">
+                <a class="nav-link" href="/workbook">Workbook</a>
+            </li>
+            <li class="nav-item" id="nav-user">
+                <a class="nav-link" href="/user">User</a>
+            </li>
+            <li class="nav-item" id="nav-group">
+                <a class="nav-link" href="/group">Group</a>
+            </li>
+            <li class="nav-item" id="nav-comment">
+                <a class="nav-link" href="/comment">Forum</a>
+            </li>
+            
+            
+                
+                
+                    <li class="nav-item float-xs-right">
+                        <a class="nav-link register" href="javascript:void(0)" data-toggle="modal" data-target="#registerModal">Register</a>
+                    </li>
+                    <li class="nav-item float-xs-right">
+                        <a class="nav-link login" href="javascript:void(0)">Login</a>
+                    </li>
+                
+            
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container" style="margin-top: 30px;">
+    
+        <div class="row alert alert-info" id="contest-announcement" style="display: none;"></div>
+    
+
+    <div class="row card" id="time-info">
+        <div class="row">
+            <div class="col-xs-3 text-xs-left">
+                <b>Begin:</b>
+                <span class="timestamp">2023-03-03 15:00 BST</span>
+            </div>
+            <div class="col-xs-6 text-xs-center">
+                <h3>
+                    
+                    
+                    ICPC Collaborative Contest - 55
+                </h3>
+            </div>
+            <div class="col-xs-3 text-xs-right">
+                <b>End:</b>
+                <span class="timestamp">2023-03-03 20:00 BST</span>
+            </div>
+        </div>
+        <div class="row" id="contest-time-slider-container">
+            <div class="slider slider-horizontal" id="contest-time-slider"><div class="slider-track"><div class="slider-track-low" style="left: 0px; width: 0%;"></div><div class="slider-selection" style="left: 0%; width: 100%;"></div><div class="slider-track-high" style="right: 0px; width: 0%;"></div><div class="slider-rangeHighlight slider-selection " style="left: 0%; width: 100%;"></div></div><div class="tooltip tooltip-main bs-tooltip-top" role="presentation" style="left: 100%;"><div class="arrow"></div><div class="tooltip-inner">5:00:00</div></div><div class="tooltip tooltip-min bs-tooltip-top" role="presentation" style="display: none;"><div class="arrow"></div><div class="tooltip-inner"></div></div><div class="tooltip tooltip-max bs-tooltip-bottom" role="presentation" style="top: 18px; display: none;"><div class="arrow"></div><div class="tooltip-inner"></div></div><div class="slider-handle min-slider-handle round" role="slider" aria-valuemin="0" aria-valuemax="18000000" aria-valuenow="18000000" aria-valuetext="5:00:00" tabindex="0" style="left: 100%;"></div><div class="slider-handle max-slider-handle round hide" role="slider" aria-valuemin="0" aria-valuemax="18000000" aria-valuenow="0" aria-valuetext="0:00:00" tabindex="0" style="left: 0%;"></div></div><input id="contest-time" type="text" data-slider-id="contest-time-slider" style="display: none;" data-value="18000000" value="18000000">
+        </div>
+        <div class="row">
+            <div class="col-xs-3 text-xs-left" id="info-elapsed"></div>
+            <div class="col-xs-6 text-xs-center">
+                <span id="info-running" style="color: green;">Ended</span>
+            </div>
+            <div class="col-xs-3 text-xs-right" id="info-remaining"></div>
+        </div>
+    </div>
+
+    
+        <div class="row">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist" id="contest-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#overview" section="overview" role="tab" aria-expanded="false">Overview</a>
+                </li>
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#problem" section="problem" role="tab">Problem</a>
+                    </li>
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#status" section="status" role="tab">Status</a>
+                    </li>
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#rank" section="rank" role="tab" aria-expanded="true">Rank (5:00:00)</a>
+                    </li>
+                
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#discuss" section="discuss" role="tab" rel="#discuss" data-disqus-identifier="contest/545548">0 Comments</a>
+                </li>
+
+                <li class="text-xs-right">
+                    <div class="btn-group" role="group">
+                        
+                            <button type="button" class="btn btn-secondary" id="btn-setting">Setting</button>
+                        
+                        <button type="button" class="btn btn-secondary" id="btn-favorite"><i class="fa fa-star-o"></i>Favorite</button>
+                        
+                            <button type="button" class="btn btn-secondary" id="btn-clone">Clone</button>
+                        
+                        
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane" id="overview" role="tabpanel" aria-expanded="false">
+                    <script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/eaca2e6abbe57346b0b3.js"></script><script defer="" src="/static/bundle/d5943f1ad0fe285dff5c.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_overview" class="container">
+
+    
+        <div class="row">
+            <table id="contest-problems" class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th class="my-stat"></th>
+                    <th class="all-stat">Stat</th>
+                    <th class="prob-num">#</th>
+                    
+                    
+                        <th class="prob-origin">Origin</th>
+                    
+                    <th class="prob-title text-xl-left">Title</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 1.92308%, rgba(255, 221, 221, 0.6) 1.92308%, rgba(255, 221, 221, 0.6) 1.92308%, rgba(0, 0, 0, 0) 1.92308%);"><a href="#status//A/1/">1</a> / <a href="#status//A/0/">1</a></td>
+                        <td class="prob-num text-xs-center">A</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-arc065_d/origin" target="_blank" title="AtCoder arc065_d" data-toggle="tooltip">
+                                        AtCoder arc065_d
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/A">
+                                A
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 90.3846%, rgba(255, 221, 221, 0.6) 90.3846%, rgba(255, 221, 221, 0.6) 90.3846%, rgba(0, 0, 0, 0) 90.3846%);"><a href="#status//B/1/">47</a> / <a href="#status//B/0/">54</a></td>
+                        <td class="prob-num text-xs-center">B</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/Kattis-symmetricorder/origin" target="_blank" title="Kattis symmetricorder" data-toggle="tooltip">
+                                        Kattis symmetricorder
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/B">
+                                B
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 3.84615%, rgba(255, 221, 221, 0.6) 3.84615%, rgba(255, 221, 221, 0.6) 5.76923%, rgba(0, 0, 0, 0) 5.76923%);"><a href="#status//C/1/">2</a> / <a href="#status//C/0/">6</a></td>
+                        <td class="prob-num text-xs-center">C</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-arc120_d/origin" target="_blank" title="AtCoder arc120_d" data-toggle="tooltip">
+                                        AtCoder arc120_d
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/C">
+                                C
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 15.3846%, rgba(255, 221, 221, 0.6) 15.3846%, rgba(255, 221, 221, 0.6) 19.2308%, rgba(0, 0, 0, 0) 19.2308%);"><a href="#status//D/1/">8</a> / <a href="#status//D/0/">22</a></td>
+                        <td class="prob-num text-xs-center">D</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/Kattis-infinite2darray/origin" target="_blank" title="Kattis infinite2darray" data-toggle="tooltip">
+                                        Kattis infinite2darray
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/D">
+                                D
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 0%, rgba(255, 221, 221, 0.6) 0%, rgba(255, 221, 221, 0.6) 0%, rgba(0, 0, 0, 0) 0%);"></td>
+                        <td class="prob-num text-xs-center">E</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-agc005_d/origin" target="_blank" title="AtCoder agc005_d" data-toggle="tooltip">
+                                        AtCoder agc005_d
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/E">
+                                E
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 23.0769%, rgba(255, 221, 221, 0.6) 23.0769%, rgba(255, 221, 221, 0.6) 38.4615%, rgba(0, 0, 0, 0) 38.4615%);"><a href="#status//F/1/">12</a> / <a href="#status//F/0/">48</a></td>
+                        <td class="prob-num text-xs-center">F</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-abc143_f/origin" target="_blank" title="AtCoder abc143_f" data-toggle="tooltip">
+                                        AtCoder abc143_f
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/F">
+                                F
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 75%, rgba(255, 221, 221, 0.6) 75%, rgba(255, 221, 221, 0.6) 75%, rgba(0, 0, 0, 0) 75%);"><a href="#status//G/1/">39</a> / <a href="#status//G/0/">47</a></td>
+                        <td class="prob-num text-xs-center">G</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-abc128_c/origin" target="_blank" title="AtCoder abc128_c" data-toggle="tooltip">
+                                        AtCoder abc128_c
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/G">
+                                G
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 7.69231%, rgba(255, 221, 221, 0.6) 7.69231%, rgba(255, 221, 221, 0.6) 7.69231%, rgba(0, 0, 0, 0) 7.69231%);"><a href="#status//H/1/">4</a> / <a href="#status//H/0/">4</a></td>
+                        <td class="prob-num text-xs-center">H</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-abc136_f/origin" target="_blank" title="AtCoder abc136_f" data-toggle="tooltip">
+                                        AtCoder abc136_f
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/H">
+                                H
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 57.6923%, rgba(255, 221, 221, 0.6) 57.6923%, rgba(255, 221, 221, 0.6) 59.6154%, rgba(0, 0, 0, 0) 59.6154%);"><a href="#status//I/1/">30</a> / <a href="#status//I/0/">60</a></td>
+                        <td class="prob-num text-xs-center">I</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/Kattis-kaleidoscopicpalindromes/origin" target="_blank" title="Kattis kaleidoscopicpalindromes" data-toggle="tooltip">
+                                        Kattis kaleidoscopicpalindromes
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/I">
+                                I
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 3.84615%, rgba(255, 221, 221, 0.6) 3.84615%, rgba(255, 221, 221, 0.6) 3.84615%, rgba(0, 0, 0, 0) 3.84615%);"><a href="#status//J/1/">2</a> / <a href="#status//J/0/">2</a></td>
+                        <td class="prob-num text-xs-center">J</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/Kattis-knockout/origin" target="_blank" title="Kattis knockout" data-toggle="tooltip">
+                                        Kattis knockout
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/J">
+                                J
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 65.3846%, rgba(255, 221, 221, 0.6) 65.3846%, rgba(255, 221, 221, 0.6) 75%, rgba(0, 0, 0, 0) 75%);"><a href="#status//K/1/">34</a> / <a href="#status//K/0/">114</a></td>
+                        <td class="prob-num text-xs-center">K</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/AtCoder-abc176_e/origin" target="_blank" title="AtCoder abc176_e" data-toggle="tooltip">
+                                        AtCoder abc176_e
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/K">
+                                K
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 5.76923%, rgba(255, 221, 221, 0.6) 5.76923%, rgba(255, 221, 221, 0.6) 13.4615%, rgba(0, 0, 0, 0) 13.4615%);"><a href="#status//L/1/">3</a> / <a href="#status//L/0/">24</a></td>
+                        <td class="prob-num text-xs-center">L</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/CodeForces-557E/origin" target="_blank" title="CodeForces 557E" data-toggle="tooltip">
+                                        CodeForces 557E
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/L">
+                                L
+                            </a>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td class="my-stat"></td>
+                        <td class="all-stat" style="background: linear-gradient(to right, rgba(169, 245, 175, 0.6) 0%, rgba(255, 221, 221, 0.6) 0%, rgba(255, 221, 221, 0.6) 3.84615%, rgba(0, 0, 0, 0) 3.84615%);"><a href="#status//M/1/">0</a> / <a href="#status//M/0/">6</a></td>
+                        <td class="prob-num text-xs-center">M</td>
+                        
+                        
+                            <td class="prob-origin text-xs-center">
+                                <a href="/problem/CodeForces-916D/origin" target="_blank" title="CodeForces 916D" data-toggle="tooltip">
+                                        CodeForces 916D
+                                </a>
+                            </td>
+                        
+                        <td class="prob-title">
+                            <a href="#problem/M">
+                                M
+                            </a>
+                        </td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    
+
+    <div class="row text-xs-right" id="contest-manager"><span style="color:blue">Public</span>. Prepared by <a href="/user/ICPC_Bot" target="_blank">ICPC_Bot</a>, 2023-03-01 22:48:05</div>
+
+    <div class="row card" id="contest-description" style="display: none"></div>
+
+</div>
+
+                </div>
+                
+                    <div class="tab-pane" id="problem" role="tabpanel">
+                        <script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/eaca2e6abbe57346b0b3.js"></script><script defer="" src="/static/bundle/9097b2bfe44a200c5ac8.js"></script><script defer="" src="/static/bundle/59be812ed95d085f4e81.js"></script><script defer="" src="/static/bundle/f0b63404279f25eb0e36.js"></script><link href="/static/bundle/d47bf8d3329cc6e2efb6.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_problem" class="container">
+    <div class="row">
+        <div class="col-md-3 container" id="prob-left-panel">
+            <ul class="nav nav-pills row" id="problem-nav">
+                
+                    <li class="nav-item">
+                        <a num="A" class="nav-link" href="#problem/A">A</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="B" class="nav-link" href="#problem/B">B</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="C" class="nav-link" href="#problem/C">C</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="D" class="nav-link" href="#problem/D">D</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="E" class="nav-link" href="#problem/E">E</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="F" class="nav-link" href="#problem/F">F</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="G" class="nav-link" href="#problem/G">G</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="H" class="nav-link" href="#problem/H">H</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="I" class="nav-link" href="#problem/I">I</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="J" class="nav-link" href="#problem/J">J</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="K" class="nav-link" href="#problem/K">K</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="L" class="nav-link" href="#problem/L">L</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a num="M" class="nav-link" href="#problem/M">M</a>
+                    </li>
+                
+            </ul>
+
+            <div class="alert alert-danger row" role="alert" id="prob-alert" style="display: none"></div>
+
+            <div id="prob-operation" class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-primary" id="problem-submit"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" class="btn btn-secondary" id="btn-contest-status">Status</a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" class="btn btn-secondary" id="btn-contest-my-status">My Status</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <a href="#" class="btn btn-secondary" id="btn-contest-translate" target="_blank">
+                                <i class="fa fa-language"></i> Translate
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a href="#" class="btn btn-secondary" id="btn-contest-problem-pdf" target="_blank">
+                                <i class="fa fa-file-pdf-o"></i> PDF
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-secondary" id="btn-problem-rejudge" style="display: none">
+                                Rejudge
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="prob-properties" class="row">
+                <div class="container">
+                    <dl class="card row"></dl>
+                </div>
+            </div>
+
+            <div id="prob-descriptions" class="row">
+                <span>Choose a description for participants:</span>
+                <div class="list-group" id="prob-descs"></div>
+            </div>
+
+            <div id="prob-ads" class="row hidden-md-down" style="margin-top: 40px;">
+                <!-- Contest sidebar -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9098591903020457" data-ad-slot="9577100134" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
+                <script>
+                  var ad_setter = setInterval(function () {
+                    if (document.getElementById('contest_problem').offsetParent !== null) {
+                      (adsbygoogle = window.adsbygoogle || []).push({});
+                      clearInterval(ad_setter);
+                    }
+                  }, 1000);
+                </script>
+            </div>
+        </div>
+        <div class="col-md-9 container" id="prob-right-panel">
+            <div class="row">
+                <div id="prob-title-contest">
+                    <h2 id="problem-title"></h2>
+                    <span class="origin">
+                        <a id="problem-origin" href="#" target="_blank"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="row" id="frame-description-container"></div>
+        </div>
+    </div>
+
+</div>
+
+                    </div>
+                
+                
+                    <div class="tab-pane" id="status" role="tabpanel">
+                        <script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/b5e0c5fd0ef6edb4ef56.js"></script><script defer="" src="/static/bundle/4503bd3cb1f9498cf759.js"></script><link href="/static/bundle/d8a6e502f72ca008e25c.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_status" class="container">
+    <div class="row" id="right-panel">
+        <table id="listStatus" class="table table-striped table-bordered table-responsive" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                <th class="run-id hidden-lg-down">Run ID</th>
+                <th class="username">
+                    Username<br>
+                    <input type="text" id="un" name="un" class="search_text" style="width:100%">
+                </th>
+                <th class="num">
+                    Prob<br>
+                    <select id="contest-status-num" name="num" class="custom-select">
+                        <option value="-">All</option>
+                    </select>
+                </th>
+                <th class="status">
+                    Result
+                    <br>
+                    <select id="res" name="res" class="custom-select">
+                        <option value="0">All</option>
+                        <option value="1">Accepted</option>
+                        <option value="2">Presentation Error</option>
+                        <option value="3">Wrong Answer</option>
+                        <option value="4">Time Limit Exceed</option>
+                        <option value="5">Memory Limit Exceed</option>
+                        <option value="6">Output Limit Exceed</option>
+                        <option value="7">Runtime Error</option>
+                        <option value="8">Compile Error</option>
+                        <option value="9">Remote OJ Unavailable</option>
+                        <option value="10">Judge Failed</option>
+                        <option value="11">Unknown Error</option>
+                        <option value="12">Submit Failed</option>
+                        <option value="13">Queuing &amp;&amp; Judging</option>
+                    </select>
+                </th>
+                <th class="runtime">Time<br>(ms)</th>
+                <th class="memory">Mem<br>(MB)</th>
+                <th class="length hidden-lg-down">Length</th>
+                <th class="language">
+                    Lang
+                    <br>
+                    <select name="language" id="language" class="custom-select">
+                        <option value="">All</option>
+                        <option value="CPP">C++</option>
+                        <option value="C">C</option>
+                        <option value="JAVA">Java</option>
+                        <option value="PASCAL">Pascal</option>
+                        <option value="PYTHON">Python</option>
+                        <option value="CSHARP">C#</option>
+                        <option value="RUBY">Ruby</option>
+                        <option value="OTHER">Other</option>
+                    </select>
+                </th>
+                <th class="date">Submit Time</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <input type="button" class="btn btn-secondary btn-md" id="refresh-all" value="Refresh" style="display: none">
+        <input type="button" class="btn btn-secondary btn-md" id="reset" value="Reset" style="display: none">
+        <input type="button" class="btn btn-secondary btn-md" id="filter" value="Filter" style="display: none">
+    </div>
+</div>
+
+                    </div>
+                
+                
+                    <div class="tab-pane active" id="rank" role="tabpanel" aria-expanded="true">
+                        <script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/ede78b5a84682aa74870.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_rank">
+    <table id="contest-rank-table" cellspacing="1" style="width: 100%;"><thead class="rank-header-fixed" style="position: fixed; top: 0px; display: none; left: 17.5px; width: 1416px;"><tr>
+       <th class="rank" rowspan="2"><div>Rank</div></th>
+       <th class="team" rowspan="2"><div>Team</div></th>
+       <th class="solve" rowspan="2"><div>Score</div></th>
+       <th class="penalty" rowspan="2"><div>Penalty</div></th><th class="prob undefined"><div><a href="#problem/A">A</a></div></th><th class="prob undefined"><div><a href="#problem/B">B</a></div></th><th class="prob undefined"><div><a href="#problem/C">C</a></div></th><th class="prob undefined"><div><a href="#problem/D">D</a></div></th><th class="prob undefined"><div><a href="#problem/E">E</a></div></th><th class="prob undefined"><div><a href="#problem/F">F</a></div></th><th class="prob undefined"><div><a href="#problem/G">G</a></div></th><th class="prob undefined"><div><a href="#problem/H">H</a></div></th><th class="prob undefined"><div><a href="#problem/I">I</a></div></th><th class="prob undefined"><div><a href="#problem/J">J</a></div></th><th class="prob undefined"><div><a href="#problem/K">K</a></div></th><th class="prob undefined"><div><a href="#problem/L">L</a></div></th><th class="prob undefined"><div><a href="#problem/M">M</a></div></th></tr><tr><th class="prob undefined"><div>1 / 1</div></th><th class="prob undefined"><div>47 / 54</div></th><th class="prob undefined"><div>2 / 6</div></th><th class="prob undefined"><div>8 / 22</div></th><th class="prob undefined"><div>0 / 0</div></th><th class="prob undefined"><div>12 / 48</div></th><th class="prob undefined"><div>39 / 47</div></th><th class="prob undefined"><div>4 / 4</div></th><th class="prob undefined"><div>30 / 60</div></th><th class="prob undefined"><div>2 / 2</div></th><th class="prob undefined"><div>34 / 114</div></th><th class="prob undefined"><div>3 / 24</div></th><th class="prob undefined"><div>0 / 6</div></th></tr></thead><thead><tr>
+       <th class="rank" rowspan="2"><div>Rank</div></th>
+       <th class="team" rowspan="2"><div>Team</div></th>
+       <th class="solve" rowspan="2"><div>Score</div></th>
+       <th class="penalty" rowspan="2"><div>Penalty</div></th><th class="prob undefined"><div><a href="#problem/A">A</a></div></th><th class="prob undefined"><div><a href="#problem/B">B</a></div></th><th class="prob undefined"><div><a href="#problem/C">C</a></div></th><th class="prob undefined"><div><a href="#problem/D">D</a></div></th><th class="prob undefined"><div><a href="#problem/E">E</a></div></th><th class="prob undefined"><div><a href="#problem/F">F</a></div></th><th class="prob undefined"><div><a href="#problem/G">G</a></div></th><th class="prob undefined"><div><a href="#problem/H">H</a></div></th><th class="prob undefined"><div><a href="#problem/I">I</a></div></th><th class="prob undefined"><div><a href="#problem/J">J</a></div></th><th class="prob undefined"><div><a href="#problem/K">K</a></div></th><th class="prob undefined"><div><a href="#problem/L">L</a></div></th><th class="prob undefined"><div><a href="#problem/M">M</a></div></th></tr><tr><th class="prob undefined"><div>1 / 1</div></th><th class="prob undefined"><div>47 / 54</div></th><th class="prob undefined"><div>2 / 6</div></th><th class="prob undefined"><div>8 / 22</div></th><th class="prob undefined"><div>0 / 0</div></th><th class="prob undefined"><div>12 / 48</div></th><th class="prob undefined"><div>39 / 47</div></th><th class="prob undefined"><div>4 / 4</div></th><th class="prob undefined"><div>30 / 60</div></th><th class="prob undefined"><div>2 / 2</div></th><th class="prob undefined"><div>34 / 114</div></th><th class="prob undefined"><div>3 / 24</div></th><th class="prob undefined"><div>0 / 6</div></th></tr></thead>
+      <tbody><tr data-c="545548" data-u="722610" data-team-id="545548-722610" class="this  ">
+      <td class="rank meta">1</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-722610"></i> <img src="https://gravatar.loli.net/avatar/28d4f59aa248621fccbe6e7c17ded65f?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/Team_M" title="Team_M steinum,nh_nayeem" target="_blank">Team_M <span style="color:gray">(steinum,nh_nayeem)</span></a></div></td>
+      <td class="solved meta"><span>9</span></td>
+      <td class="penalty meta">
+        <span class="minute">948</span>
+        <span class="hms">15:48:26</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:42:12<br>&nbsp;</td><td class="prob accepted">4:29:14<br>&nbsp;</td><td class="prob accepted fb">0:36:31<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:35:21<br>&nbsp;</td><td class="prob accepted fb">0:09:16<br>&nbsp;</td><td class="prob accepted fb">1:40:55<br>&nbsp;</td><td class="prob accepted">0:50:50<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:54:38<br>&nbsp;</td><td class="prob accepted">3:29:29<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="689765" data-team-id="545548-689765" class="this  ">
+      <td class="rank meta">2</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-689765"></i> <img src="https://gravatar.loli.net/avatar/395ec42da59904ac331425a423c28279?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/TheOneUDontWant" title="TheOneUDontWant JnU" target="_blank">TheOneUDontWant <span style="color:gray">(JnU)</span></a></div></td>
+      <td class="solved meta"><span>8</span></td>
+      <td class="penalty meta">
+        <span class="minute">909</span>
+        <span class="hms">15:09:55</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:14:37<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:20:12<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:18:15<br>&nbsp;</td><td class="prob accepted">0:41:08<br>&nbsp;</td><td class="prob accepted">4:31:27<br>&nbsp;</td><td class="prob accepted">0:28:24<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:07:57<br> <span>(-1)</span></td><td class="prob accepted fb">1:27:55<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="724268" data-team-id="545548-724268" class="this  ">
+      <td class="rank meta">3</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-724268"></i> <img src="https://gravatar.loli.net/avatar/001f0d2a26d78f5912a50bc34dbc58f2?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/RUET_Phoenix" title="RUET_Phoenix arnab,rezo,masud" target="_blank">RUET_Phoenix <span style="color:gray">(arnab,rezo,masud)</span></a></div></td>
+      <td class="solved meta"><span>7</span></td>
+      <td class="penalty meta">
+        <span class="minute">805</span>
+        <span class="hms">13:25:29</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:11:33<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted fb">1:55:34<br>&nbsp;</td><td class="prob accepted">0:30:36<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:38:22<br>&nbsp;</td><td class="prob accepted fb">3:33:09<br>&nbsp;</td><td class="prob accepted">0:57:46<br>&nbsp;</td><td class="prob accepted">4:58:29<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="729538" data-team-id="545548-729538" class="this  ">
+      <td class="rank meta">4</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-729538"></i> <img src="https://gravatar.loli.net/avatar/e4ff94dd79a5e0b1047893be40370527?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/ComediansOfError" title="ComediansOfError (Sharif,Shafi,Hasan)" target="_blank">ComediansOfError <span style="color:gray">((Sharif,Shafi,Hasan))</span></a></div></td>
+      <td class="solved meta"><span>6</span></td>
+      <td class="penalty meta">
+        <span class="minute">756</span>
+        <span class="hms">12:36:49</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:23:01<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:25:36<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:43:54<br>&nbsp;</td><td class="prob accepted">3:35:08<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:29:00<br>&nbsp;</td><td class="prob accepted">1:00:10<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="639988" data-team-id="545548-639988" class="this  ">
+      <td class="rank meta">5</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-639988"></i> <img src="https://gravatar.loli.net/avatar/f5aad3cf73ce194430199d408a5e2e85?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/KUET_FALCONS" title="KUET_FALCONS SABBIR,MUKIM,ZOBAYER" target="_blank">KUET_FALCONS <span style="color:gray">(SABBIR,MUKIM,ZOBAYER)</span></a></div></td>
+      <td class="solved meta"><span>6</span></td>
+      <td class="penalty meta">
+        <span class="minute">776</span>
+        <span class="hms">12:56:25</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:22:52<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:53:47<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-12)</span></td><td class="prob accepted">0:58:09<br> <span>(-1)</span></td><td class="prob accepted">4:04:38<br>&nbsp;</td><td class="prob accepted">1:05:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:31:31<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="722191" data-team-id="545548-722191" class="this  ">
+      <td class="rank meta">6</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-722191"></i> <img src="https://gravatar.loli.net/avatar/7aa5ad13211013d36394490588b7851f?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/Ru_AuraSpherE" title="Ru_AuraSpherE AuraSpherE" target="_blank">Ru_AuraSpherE <span style="color:gray">(AuraSpherE)</span></a></div></td>
+      <td class="solved meta"><span>6</span></td>
+      <td class="penalty meta">
+        <span class="minute">845</span>
+        <span class="hms">14:05:06</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:53<br>&nbsp;</td><td class="prob accepted fb">3:22:19<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:30:36<br>&nbsp;</td><td class="prob accepted">0:58:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:34:06<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:38:55<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="643263" data-team-id="545548-643263" class="this  ">
+      <td class="rank meta">7</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-643263"></i> <img src="https://gravatar.loli.net/avatar/5e9969f8bbf4ff127b22ca3b541ac4cc?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/KUET_BreakDown" title="KUET_BreakDown Likhon,Fizz,Shakil" target="_blank">KUET_BreakDown <span style="color:gray">(Likhon,Fizz,Shakil)</span></a></div></td>
+      <td class="solved meta"><span>6</span></td>
+      <td class="penalty meta">
+        <span class="minute">869</span>
+        <span class="hms">14:29:41</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:47<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:48:40<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:22:00<br> <span>(-3)</span></td><td class="prob accepted">0:32:01<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:08:39<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">2:17:34<br> <span>(-1)</span></td><td class="prob failed"> <span>(-8)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="393783" data-team-id="545548-393783" class="this  ">
+      <td class="rank meta">8</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-393783"></i> <img src="https://vj.csgrandeur.cn/user/avatar/393783?v=1650181771" alt="avatar" class="contestant-avatar"><a href="/user/Mahin_021" title="Mahin_021 KUET_Mahin" target="_blank">Mahin_021 <span style="color:gray">(KUET_Mahin)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">451</span>
+        <span class="hms">7:31:03</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:22:51<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:01:16<br>&nbsp;</td><td class="prob accepted">0:51:31<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:38:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:16:32<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="639992" data-team-id="545548-639992" class="this  ">
+      <td class="rank meta">9</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-639992"></i> <img src="https://gravatar.loli.net/avatar/880047b988fea4b9829b0cd09002f5bc?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/AUST_CRACKPLTN" title="AUST_CRACKPLTN" target="_blank">AUST_CRACKPLTN</a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">479</span>
+        <span class="hms">7:59:52</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:16:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:44:52<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:35:24<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:27:38<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:15:56<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="640004" data-team-id="545548-640004" class="this  ">
+      <td class="rank meta">10</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-640004"></i> <img src="https://gravatar.loli.net/avatar/d2bdf339cd389fd1fbb59da1fe496f14?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/KuetEffervescent" title="KuetEffervescent Opi, Arnob, Emon" target="_blank">KuetEffervescent <span style="color:gray">(Opi, Arnob, Emon)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">488</span>
+        <span class="hms">8:08:19</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:12:50<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:59:14<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob accepted">0:19:15<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:17:33<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:19:27<br> <span>(-1)</span></td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="256062" data-team-id="545548-256062" class="this  ">
+      <td class="rank meta">11</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-256062"></i> <img src="https://gravatar.loli.net/avatar/a8de0d72d2d60f1c5dbce7daeb8d0c57?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/lzy_tourist" title="lzy_tourist Sazol_21" target="_blank">lzy_tourist <span style="color:gray">(Sazol_21)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">493</span>
+        <span class="hms">8:13:02</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:16:19<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:38:34<br>&nbsp;</td><td class="prob accepted">1:03:14<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:38:06<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:36:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="275671" data-team-id="545548-275671" class="this  ">
+      <td class="rank meta">12</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-275671"></i> <img src="https://vj.csgrandeur.cn/user/avatar/275671?v=1665838693" alt="avatar" class="contestant-avatar"><a href="/user/akashislam740" title="akashislam740 Akash" target="_blank">akashislam740 <span style="color:gray">(Akash)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">522</span>
+        <span class="hms">8:42:12</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:32:08<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:12:01<br>&nbsp;</td><td class="prob accepted">0:55:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:42:36<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:19:31<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="716421" data-team-id="545548-716421" class="this  ">
+      <td class="rank meta">13</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-716421"></i> <img src="https://gravatar.loli.net/avatar/69589326b12e0b8e7ffc642ebe5dfca6?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/_team_x_" title="_team_x_ Ashiq,Farhan,Shimla" target="_blank">_team_x_ <span style="color:gray">(Ashiq,Farhan,Shimla)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">644</span>
+        <span class="hms">10:44:42</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:28:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:33:37<br> <span>(-1)</span></td><td class="prob accepted">0:30:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:09:38<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:22:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="674842" data-team-id="545548-674842" class="this  ">
+      <td class="rank meta">14</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-674842"></i> <img src="https://gravatar.loli.net/avatar/aa1b2fd3611afb8aadd49340dbe26fa0?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/DreamsOfsuccess" title="DreamsOfsuccess mahedi,sajjat,azizur" target="_blank">DreamsOfsuccess <span style="color:gray">(mahedi,sajjat,azizur)</span></a></div></td>
+      <td class="solved meta"><span>5</span></td>
+      <td class="penalty meta">
+        <span class="minute">792</span>
+        <span class="hms">13:12:28</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:00<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:23:51<br> <span>(-1)</span></td><td class="prob accepted">0:42:25<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:36:15<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">2:09:57<br> <span>(-9)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="647344" data-team-id="545548-647344" class="this  ">
+      <td class="rank meta">15</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-647344"></i> <img src="https://gravatar.loli.net/avatar/d65448e11af0d11d948df009d3744d63?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/HSTU_PantaBhaat" title="HSTU_PantaBhaat Ashik,Sumon,Sourav" target="_blank">HSTU_PantaBhaat <span style="color:gray">(Ashik,Sumon,Sourav)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">175</span>
+        <span class="hms">2:55:19</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:08:10<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob accepted">0:20:57<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:15:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:50:19<br> <span>(-1)</span></td><td class="prob failed"> <span>(-3)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="272256" data-team-id="545548-272256" class="this  ">
+      <td class="rank meta">16</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-272256"></i> <img src="https://vj.csgrandeur.cn/user/avatar/272256?v=1674196153" alt="avatar" class="contestant-avatar"><a href="/user/Jamil314" title="Jamil314 Jamil 2018831035" target="_blank">Jamil314 <span style="color:gray">(Jamil 2018831035)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">197</span>
+        <span class="hms">3:17:15</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted fb">0:05:03<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:17:07<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:13:08<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">0:41:57<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td>
+      </tr><tr data-c="545548" data-u="671263" data-team-id="545548-671263" class="this  ">
+      <td class="rank meta">17</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-671263"></i> <img src="https://gravatar.loli.net/avatar/4ea52207452dc689b4989cc1ecd1ee11?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/IIUC_Musgravite" title="IIUC_Musgravite Musgravite" target="_blank">IIUC_Musgravite <span style="color:gray">(Musgravite)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">225</span>
+        <span class="hms">3:45:37</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:09:13<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:35:47<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:14:16<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted fb">0:26:21<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="647312" data-team-id="545548-647312" class="this  ">
+      <td class="rank meta">18</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-647312"></i> <img src="https://vj.csgrandeur.cn/user/avatar/647312?v=1673600070" alt="avatar" class="contestant-avatar"><a href="/user/ExponentialDecay" title="ExponentialDecay EWU" target="_blank">ExponentialDecay <span style="color:gray">(EWU)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">242</span>
+        <span class="hms">4:02:45</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:11:16<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-3)</span></td><td class="prob accepted">0:27:30<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:56:10<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:27:49<br>&nbsp;</td><td class="prob failed"> <span>(-3)</span></td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="716539" data-team-id="545548-716539" class="this  ">
+      <td class="rank meta">19</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-716539"></i> <img src="https://gravatar.loli.net/avatar/fbeba096084d57e04deb227a7d7e47d3?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/KUET_Bit_by_bit" title="KUET_Bit_by_bit (Eleus,Emon,Mehedy)" target="_blank">KUET_Bit_by_bit <span style="color:gray">((Eleus,Emon,Mehedy))</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">247</span>
+        <span class="hms">4:07:43</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:46:04<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted">0:58:52<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:11:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:10:51<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="533096" data-team-id="545548-533096" class="this  ">
+      <td class="rank meta">20</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-533096"></i> <img src="https://vj.csgrandeur.cn/user/avatar/533096?v=1667025829" alt="avatar" class="contestant-avatar"><a href="/user/Nafis_Ahmed081" title="Nafis_Ahmed081 Nafis" target="_blank">Nafis_Ahmed081 <span style="color:gray">(Nafis)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">276</span>
+        <span class="hms">4:36:49</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:23:27<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:17:19<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted fb">0:15:31<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:40:32<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="478823" data-team-id="545548-478823" class="this  ">
+      <td class="rank meta">21</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-478823"></i> <img src="https://gravatar.loli.net/avatar/535e111234158edf00280243c4261a31?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/Shofiqur" title="Shofiqur" target="_blank">Shofiqur</a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">288</span>
+        <span class="hms">4:48:51</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:52<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:45:42<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:02:48<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:39:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="636302" data-team-id="545548-636302" class="this  ">
+      <td class="rank meta">22</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-636302"></i> <img src="https://gravatar.loli.net/avatar/bb0559fc961bfdffee149473ba667836?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/KUET_Blaziken" title="KUET_Blaziken Parvej,Liad,Sadi" target="_blank">KUET_Blaziken <span style="color:gray">(Parvej,Liad,Sadi)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">289</span>
+        <span class="hms">4:49:30</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:18:57<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob accepted">0:42:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:14:26<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:13:50<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="722614" data-team-id="545548-722614" class="this  ">
+      <td class="rank meta">23</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-722614"></i> <img src="https://gravatar.loli.net/avatar/82f71eae94948a4fa77313ec464cd56d?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/NotDecidedYet" title="NotDecidedYet Ashraf,Nafis,Rifat" target="_blank">NotDecidedYet <span style="color:gray">(Ashraf,Nafis,Rifat)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">292</span>
+        <span class="hms">4:52:37</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:07:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:43:59<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:31:36<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:09:45<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="405110" data-team-id="545548-405110" class="this  ">
+      <td class="rank meta">24</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-405110"></i> <img src="https://gravatar.loli.net/avatar/8890b56dc0473412869dd1c4ad3bc2ae?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/mustafiz05" title="mustafiz05 mustafiz(12th)" target="_blank">mustafiz05 <span style="color:gray">(mustafiz(12th))</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">388</span>
+        <span class="hms">6:28:28</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:16:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-8)</span></td><td class="prob accepted">0:28:54<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:19:32<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:03:13<br> <span>(-7)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="738092" data-team-id="545548-738092" class="this  ">
+      <td class="rank meta">25</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-738092"></i> <img src="https://gravatar.loli.net/avatar/8b17d7bbbd7d70bc918a08d566c2cddf?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/MBSTU__WAWAWA" title="MBSTU__WAWAWA Mohir,Rayat,Sanjida" target="_blank">MBSTU__WAWAWA <span style="color:gray">(Mohir,Rayat,Sanjida)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">415</span>
+        <span class="hms">6:55:53</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:09:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:48:20<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">3:58:45<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:38:52<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="640464" data-team-id="545548-640464" class="this  ">
+      <td class="rank meta">26</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-640464"></i> <img src="https://gravatar.loli.net/avatar/b3aac58e25777f53d98f7adb9093434e?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/KUET_Behemoth" title="KUET_Behemoth ShorifulMishuTashin" target="_blank">KUET_Behemoth <span style="color:gray">(ShorifulMishuTashin)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">443</span>
+        <span class="hms">7:23:28</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:11:27<br>&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob accepted">1:13:17<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">2:53:59<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:24:45<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="674625" data-team-id="545548-674625" class="this  ">
+      <td class="rank meta">27</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-674625"></i> <img src="https://gravatar.loli.net/avatar/a820d0114279942545d31df75333f1c4?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/BSMRSTU_KeyBlade" title="BSMRSTU_KeyBlade Fuad, Masud, Arnab" target="_blank">BSMRSTU_KeyBlade <span style="color:gray">(Fuad, Masud, Arnab)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">529</span>
+        <span class="hms">8:49:00</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:17:24<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:35:55<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:28:59<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:46:42<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="669405" data-team-id="545548-669405" class="this  ">
+      <td class="rank meta">28</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-669405"></i> <img src="https://gravatar.loli.net/avatar/f38d59ae1b62b4ba90ad5638f6741ff6?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/Team_Robust__" title="Team_Robust__ Team_Robust" target="_blank">Team_Robust__ <span style="color:gray">(Team_Robust)</span></a></div></td>
+      <td class="solved meta"><span>4</span></td>
+      <td class="penalty meta">
+        <span class="minute">669</span>
+        <span class="hms">11:09:32</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:13<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:56:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:54:13<br> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">0:38:17<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="666870" data-team-id="545548-666870" class="this  ">
+      <td class="rank meta">29</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-666870"></i> <img src="https://gravatar.loli.net/avatar/d58301de816647d1beb9b645a43e350e?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/wasimur_01" title="wasimur_01 Wasimur (2103136)" target="_blank">wasimur_01 <span style="color:gray">(Wasimur (2103136))</span></a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">130</span>
+        <span class="hms">2:10:24</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:13:28<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:45:53<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:11:03<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="716534" data-team-id="545548-716534" class="this  ">
+      <td class="rank meta">30</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-716534"></i> <img src="https://gravatar.loli.net/avatar/4c531577737e31c05baec6cd10646258?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/Do_Not_Laugh" title="Do_Not_Laugh masud, ashik, emon" target="_blank">Do_Not_Laugh <span style="color:gray">(masud, ashik, emon)</span></a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">232</span>
+        <span class="hms">3:52:53</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:27:04<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:42:52<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:02:57<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="666754" data-team-id="545548-666754" class="this  ">
+      <td class="rank meta">31</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-666754"></i> <img src="https://gravatar.loli.net/avatar/35409f87b637612dd0f42e2e0df7dbea?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/uiu_zero_solvers" title="uiu_zero_solvers Masud, Latin, Abir" target="_blank">uiu_zero_solvers <span style="color:gray">(Masud, Latin, Abir)</span></a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">368</span>
+        <span class="hms">6:08:03</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:16:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:03:52<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:07:42<br> <span>(-10)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="351353" data-team-id="545548-351353" class="this  ">
+      <td class="rank meta">32</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-351353"></i> <img src="https://gravatar.loli.net/avatar/bad802292486645efecdb3044dc49a38?d=robohash" alt="avatar" class="contestant-avatar"><a href="/user/Kabir_C191063" title="Kabir_C191063" target="_blank">Kabir_C191063</a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">389</span>
+        <span class="hms">6:29:24</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:24:44<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:45:21<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob accepted">1:39:19<br> <span>(-8)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="735249" data-team-id="545548-735249" class="this  ">
+      <td class="rank meta">33</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-735249"></i> <img src="https://gravatar.loli.net/avatar/48a69399cdd98f94eb22961da0c2e934?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/BSMRSTU_Pushback" title="BSMRSTU_Pushback Tushar,Imran,Bisso" target="_blank">BSMRSTU_Pushback <span style="color:gray">(Tushar,Imran,Bisso)</span></a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">524</span>
+        <span class="hms">8:44:45</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:18:02<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:54:47<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:51:56<br> <span>(-7)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="562740" data-team-id="545548-562740" class="this  ">
+      <td class="rank meta">34</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-562740"></i> <img src="https://gravatar.loli.net/avatar/5effac0e2d21a8d1b7c395503bff883b?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/Ginchan" title="Ginchan 2019831025" target="_blank">Ginchan <span style="color:gray">(2019831025)</span></a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">773</span>
+        <span class="hms">12:53:04</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">3:46:51<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:58:20<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:27:53<br> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="743775" data-team-id="545548-743775" class="this  ">
+      <td class="rank meta">35</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-743775"></i> <img src="https://gravatar.loli.net/avatar/e90426c7b423dae6282e77dc34bc80db?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/IIUC_Sparrows" title="IIUC_Sparrows" target="_blank">IIUC_Sparrows</a></div></td>
+      <td class="solved meta"><span>3</span></td>
+      <td class="penalty meta">
+        <span class="minute">804</span>
+        <span class="hms">13:24:12</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">4:24:39<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:28:07<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:31:26<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="116109" data-team-id="545548-116109" class="this  ">
+      <td class="rank meta">36</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-116109"></i> <img src="https://gravatar.loli.net/avatar/ecbeaad44f19d1bd87753f1eb2695764?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/prodipdatta7" title="prodipdatta7 Prodip" target="_blank">prodipdatta7 <span style="color:gray">(Prodip)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">87</span>
+        <span class="hms">1:27:01</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:24:12<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:42:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="627704" data-team-id="545548-627704" class="this  ">
+      <td class="rank meta">37</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-627704"></i> <img src="https://gravatar.loli.net/avatar/d75c4bef70840f4373a64eba1c46a68d?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/Sarwar82" title="Sarwar82 2020331031_Sarwar" target="_blank">Sarwar82 <span style="color:gray">(2020331031_Sarwar)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">103</span>
+        <span class="hms">1:43:13</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:45:44<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:57:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="286607" data-team-id="545548-286607" class="this  ">
+      <td class="rank meta">38</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-286607"></i> <img src="https://gravatar.loli.net/avatar/b73c4052ce8867cac31284a7a23ff292?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/Jaman_" title="Jaman_" target="_blank">Jaman_</a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">133</span>
+        <span class="hms">2:13:18</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:24:22<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:48:56<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-4)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="410888" data-team-id="545548-410888" class="this  ">
+      <td class="rank meta">39</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-410888"></i> <img src="https://gravatar.loli.net/avatar/a28442e25259f22dc80b56115c6f5722?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/n0man_ch0wdhury" title="n0man_ch0wdhury NomanChowdhury" target="_blank">n0man_ch0wdhury <span style="color:gray">(NomanChowdhury)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">165</span>
+        <span class="hms">2:45:35</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:51:27<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:54:08<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="720711" data-team-id="545548-720711" class="this  ">
+      <td class="rank meta">40</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-720711"></i> <img src="https://gravatar.loli.net/avatar/afb1b83d4a99cb7aff71f9b66c2d5c9b?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/TEAM_AUST" title="TEAM_AUST Hamza, Sajid, Apu" target="_blank">TEAM_AUST <span style="color:gray">(Hamza, Sajid, Apu)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">201</span>
+        <span class="hms">3:21:19</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">1:17:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">1:43:30<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-2)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="718979" data-team-id="545548-718979" class="this  ">
+      <td class="rank meta">41</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-718979"></i> <img src="https://gravatar.loli.net/avatar/8e109e6f1d08290c3061254436a67561?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/KUET_One_nd_Zero" title="KUET_One_nd_Zero Saima,Sabnaj,Subah" target="_blank">KUET_One_nd_Zero <span style="color:gray">(Saima,Sabnaj,Subah)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">307</span>
+        <span class="hms">5:07:10</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">2:17:11<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">2:49:59<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="397226" data-team-id="545548-397226" class="this  ">
+      <td class="rank meta">42</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-397226"></i> <img src="https://gravatar.loli.net/avatar/a67742f7497d2040b068396252604c36?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/Fahim9090" title="Fahim9090 Fahim" target="_blank">Fahim9090 <span style="color:gray">(Fahim)</span></a></div></td>
+      <td class="solved meta"><span>2</span></td>
+      <td class="penalty meta">
+        <span class="minute">376</span>
+        <span class="hms">6:16:56</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">2:36:17<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">3:20:39<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="731338" data-team-id="545548-731338" class="this  ">
+      <td class="rank meta">43</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-731338"></i> <img src="https://gravatar.loli.net/avatar/e1a01e778cb8ca08a6e731dd1a92ecb0?d=wavatar" alt="avatar" class="contestant-avatar"><a href="/user/Avadakedavra" title="Avadakedavra" target="_blank">Avadakedavra</a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">20</span>
+        <span class="hms">0:20:16</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:20:16<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-7)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="649678" data-team-id="545548-649678" class="this  ">
+      <td class="rank meta">44</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-649678"></i> <img src="https://gravatar.loli.net/avatar/bc0f735029b9b5f741be590a28d4c4db?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/jannat_moli" title="jannat_moli jannat" target="_blank">jannat_moli <span style="color:gray">(jannat)</span></a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">25</span>
+        <span class="hms">0:25:49</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:25:49<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="744189" data-team-id="545548-744189" class="this  ">
+      <td class="rank meta">45</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-744189"></i> <img src="https://vj.csgrandeur.cn/user/avatar/744189?v=1677257292" alt="avatar" class="contestant-avatar"><a href="/user/sh_sho1kat" title="sh_sho1kat RUET_2003045" target="_blank">sh_sho1kat <span style="color:gray">(RUET_2003045)</span></a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">26</span>
+        <span class="hms">0:26:35</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:26:35<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="716530" data-team-id="545548-716530" class="this  ">
+      <td class="rank meta">46</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-716530"></i> <img src="https://gravatar.loli.net/avatar/f6bd6f692aa838cafd341e4ae7461aa6?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/IftxApurbaxMahdi" title="IftxApurbaxMahdi" target="_blank">IftxApurbaxMahdi</a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">60</span>
+        <span class="hms">1:00:30</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">0:40:30<br> <span>(-1)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-4)</span></td>
+      </tr><tr data-c="545548" data-u="730035" data-team-id="545548-730035" class="this  ">
+      <td class="rank meta">47</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-730035"></i> <img src="https://gravatar.loli.net/avatar/b218a9d9adb642102d5dce4c2d6f5713?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/Hum_Nehi_Jitega" title="Hum_Nehi_Jitega Anik-Bayzid-Himel" target="_blank">Hum_Nehi_Jitega <span style="color:gray">(Anik-Bayzid-Himel)</span></a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">69</span>
+        <span class="hms">1:09:07</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">1:09:07<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="404301" data-team-id="545548-404301" class="this  ">
+      <td class="rank meta">48</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-404301"></i> <img src="https://gravatar.loli.net/avatar/5273131947bcf966a40e1d4d06d957a2?d=monsterid" alt="avatar" class="contestant-avatar"><a href="/user/Mehraj_mi2" title="Mehraj_mi2 mithu(2k20)" target="_blank">Mehraj_mi2 <span style="color:gray">(mithu(2k20))</span></a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">103</span>
+        <span class="hms">1:43:03</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob accepted">0:43:03<br> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="185819" data-team-id="545548-185819" class="this  ">
+      <td class="rank meta">49</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-185819"></i> <img src="https://vj.csgrandeur.cn/user/avatar/185819?v=1655833253" alt="avatar" class="contestant-avatar"><a href="/user/irri" title="irri" target="_blank">irri</a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">232</span>
+        <span class="hms">3:52:29</span>
+      </td><td class="prob accepted fb">3:52:29<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="224528" data-team-id="545548-224528" class="this  ">
+      <td class="rank meta">50</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-224528"></i> <img src="https://gravatar.loli.net/avatar/0deaae9fb40d8d061cd9df8e62580c88?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/PARTHO_PDAS" title="PARTHO_PDAS DCC_Halcyon" target="_blank">PARTHO_PDAS <span style="color:gray">(DCC_Halcyon)</span></a></div></td>
+      <td class="solved meta"><span>1</span></td>
+      <td class="penalty meta">
+        <span class="minute">277</span>
+        <span class="hms">4:37:13</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob accepted">4:37:13<br>&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="479273" data-team-id="545548-479273" class="this  ">
+      <td class="rank meta">51</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-479273"></i> <img src="https://gravatar.loli.net/avatar/84fe5535b7c1fa995e4c3bfcf641e6b4?d=retro" alt="avatar" class="contestant-avatar"><a href="/user/Suman_Mandol" title="Suman_Mandol suman mandol" target="_blank">Suman_Mandol <span style="color:gray">(suman mandol)</span></a></div></td>
+      <td class="solved meta"><span>0</span></td>
+      <td class="penalty meta">
+        <span class="minute">0</span>
+        <span class="hms">0:00:00</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-3)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td>
+      </tr><tr data-c="545548" data-u="636061" data-team-id="545548-636061" class="this  ">
+      <td class="rank meta">52</td>  
+      <td class="team meta"><div><i class="fa fa-star-o star-team" data-team-id="545548-636061"></i> <img src="https://gravatar.loli.net/avatar/a9fccea3f6bc44d0885601e69adbb082?d=identicon" alt="avatar" class="contestant-avatar"><a href="/user/KUET_BUGMAN" title="KUET_BUGMAN ZAHID, MAHIN, NILOY" target="_blank">KUET_BUGMAN <span style="color:gray">(ZAHID, MAHIN, NILOY)</span></a></div></td>
+      <td class="solved meta"><span>0</span></td>
+      <td class="penalty meta">
+        <span class="minute">0</span>
+        <span class="hms">0:00:00</span>
+      </td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob failed"> <span>(-6)</span></td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td><td class="prob ">&nbsp;</td></tr></tbody></table>
+    <table id="contest-rank-table-export"></table>
+
+    <div class="rank_tool">
+        <i class="fa fa-street-view fa-3x" id="img_find_me" title="Find me" style="visibility: hidden;"></i>
+        <i class="fa fa-line-chart fa-3x" id="img_time_chart" title="Time chart"></i>
+    </div>
+
+    <!-- Team info modal -->
+    <div class="modal" id="teamInfoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>×</span>
+                    </button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-bordered contest-info"></table>
+                    <div id="rank-time-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+                    </div>
+                
+                <div class="tab-pane" id="discuss" role="tabpanel">
+                    <script defer="" src="/static/bundle/b0d9d208e38038714b86.js"></script><script defer="" src="/static/bundle/eaca2e6abbe57346b0b3.js"></script><script defer="" src="/static/bundle/a91bc75d09c0bc04bb7b.js"></script><link href="/static/bundle/3d22b9416420b9d1cc34.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contest_discuss"><div class="comment-posts-container"><div class="comment-edit">
+        <textarea class="form-control edit" name="content" rows="6" placeholder="Comment in Markdown"></textarea>
+        <div class="comment-error alert-danger" style="display: none; padding: 20px"></div>
+        <div class="preview">
+            <span>Preview:</span><br>
+            <div class="preview-content"></div>
+            <div class="buttons">
+                <button class="btn btn-primary save" style="display: none">Save</button>
+                <button class="btn btn-primary post broadcast">Post &amp; Broadcast</button>
+                <button class="btn btn-secondary post">Post</button>
+                <button class="btn btn-secondary cancel">Clear</button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    
+
+    <div class="show-spam" style="display: none;">Show Spam</div>
+
+    
+
+</div></div>
+
+                </div>
+            </div>
+
+        </div>
+    
+
+    
+
+    
+
+</div>
+
+<textarea style="display: none" name="dataJson">{"id":545548,"title":"ICPC Collaborative Contest - 55","type":0,"openness":0,"authStatus":1,"begin":1677834000000,"end":1677852000000,"createTime":1677689285000,"started":true,"ended":true,"managerId":504519,"managerName":"ICPC_Bot","fav":false,"description":{"format":"MD","content":""},"announcement":"","problems":[{"pid":584932,"title":"A","oj":"AtCoder","probNum":"arc065_d","num":"A","publicDescId":1193577109,"publicDescVersion":1686015916000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"262144 kB","spoiler":false},{"title":"Source","content":"AtCoder Regular Contest 065","spoiler":true}],"weight":1,"submitTips":"The problem is unavailable for long time.","languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":773558,"title":"B","oj":"Kattis","probNum":"symmetricorder","num":"B","publicDescId":1104363512,"publicDescVersion":1686990771000,"properties":[{"title":"Time limit","content":"1000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"OS","content":"Linux","spoiler":false}],"weight":1,"submitMethods":[true,false,false]},{"pid":4018983,"title":"C","oj":"AtCoder","probNum":"arc120_d","num":"C","publicDescId":2106963343,"publicDescVersion":1685714094000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"Source","content":"AtCoder Regular Contest 120","spoiler":true}],"weight":1,"submitTips":"The problem is unavailable for long time.","languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":3945190,"title":"D","oj":"Kattis","probNum":"infinite2darray","num":"D","publicDescId":1937929475,"publicDescVersion":1686932366000,"properties":[{"title":"Time limit","content":"1000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"OS","content":"Linux","spoiler":false}],"weight":1,"submitMethods":[true,false,false]},{"pid":3400885,"title":"E","oj":"AtCoder","probNum":"agc005_d","num":"E","publicDescId":1193406975,"publicDescVersion":1687301161000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"262144 kB","spoiler":false},{"title":"Source","content":"AtCoder Grand Contest 005","spoiler":true}],"weight":1,"languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":2850699,"title":"F","oj":"AtCoder","probNum":"abc143_f","num":"F","publicDescId":1248130856,"publicDescVersion":1687228651000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"Source","content":"AtCoder Beginner Contest 143","spoiler":true}],"weight":1,"languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":2564393,"title":"G","oj":"AtCoder","probNum":"abc128_c","num":"G","publicDescId":1263585219,"publicDescVersion":1687175131000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"Source","content":"AtCoder Beginner Contest 128","spoiler":true}],"weight":1,"languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":2637543,"title":"H","oj":"AtCoder","probNum":"abc136_f","num":"H","publicDescId":1262050621,"publicDescVersion":1687027936000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"Source","content":"AtCoder Beginner Contest 136","spoiler":true}],"weight":1,"languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":2009192,"title":"I","oj":"Kattis","probNum":"kaleidoscopicpalindromes","num":"I","publicDescId":1323393017,"publicDescVersion":1687190004000,"properties":[{"title":"Time limit","content":"5000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"OS","content":"Linux","spoiler":false}],"weight":1,"submitMethods":[true,false,false]},{"pid":1250407,"title":"J","oj":"Kattis","probNum":"knockout","num":"J","publicDescId":1297158999,"publicDescVersion":1687028944000,"properties":[{"title":"Time limit","content":"3000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"OS","content":"Linux","spoiler":false}],"weight":1,"submitMethods":[true,false,false]},{"pid":3660196,"title":"K","oj":"AtCoder","probNum":"abc176_e","num":"K","publicDescId":1887412717,"publicDescVersion":1686491516000,"properties":[{"title":"Time limit","content":"3000 ms","spoiler":false},{"title":"Mem limit","content":"1048576 kB","spoiler":false},{"title":"Source","content":"AtCoder Beginner Contest 176","spoiler":true}],"weight":1,"languages":{"4051":"Scala (2.13.1)","4052":"Java (OpenJDK 1.8.0)","4053":"Scheme (Gauche 0.9.9)","4010":"C# (.NET Core 3.1.201)","4054":"Standard ML (MLton 20130715)","4011":"C# (Mono-mcs 6.8.0.105)","4055":"Swift (5.2.1)","4012":"C# (Mono-csc 3.5.0)","4056":"Text (cat 8.28)","4013":"Clojure (1.10.1.536)","4057":"TypeScript (3.8)","4014":"Crystal (0.33.0)","4058":"Visual Basic (.NET Core 3.1.101)","4050":"Rust (1.42.0)","4004":"C++ (Clang 10.0.0)","4048":"Racket (7.6)","4005":"Java (OpenJDK 11.0.6)","4049":"Ruby (2.7.1)","4006":"Python (3.8.2)","4007":"Bash (5.0.11)","4008":"bc (1.07.1)","4009":"Awk (GNU Awk 4.1.4)","4062":"Brainfuck (bf 20041219)","4063":"Ada2012 (GNAT 9.2.1)","4020":"Erlang (22.3)","4064":"Unlambda (2.0.0)","4021":"Elixir (1.10.2)","4065":"Cython (0.29.16)","4022":"F# (.NET Core 3.1.201)","4066":"Sed (4.4)","4023":"F# (Mono 10.2.3)","4067":"Vim (8.2.0460)","4024":"Forth (gforth 0.7.3)","4025":"Fortran (GNU Fortran 9.2.1)","4060":"COBOL - Fixed (OpenCOBOL 1.1.0)","4061":"COBOL - Free (OpenCOBOL 1.1.0)","4015":"D (DMD 2.091.0)","4059":"Zsh (5.4.2)","4016":"D (GDC 9.2.1)","4017":"D (LDC 1.20.1)","4018":"Dart (2.7.2)","4019":"dc (1.4.1)","4030":"JavaScript (Node.js 12.16.1)","4031":"Julia (1.4.0)","4032":"Kotlin (1.3.71)","4033":"Lua (Lua 5.3.5)","4034":"Lua (LuaJIT 2.1.0)","4035":"Dash (0.5.8)","4036":"Nim (1.0.6)","4026":"Go (1.14.1)","4027":"Haskell (GHC 8.8.3)","4028":"Haxe (4.0.3); js","4029":"Haxe (4.0.3); Java","4040":"Octave (5.2.0)","4041":"Pascal (FPC 3.0.4)","4042":"Perl (5.26.1)","4043":"Raku (Rakudo 2020.02.1)","4044":"PHP (7.4.4)","4001":"C (GCC 9.2.1)","4045":"Prolog (SWI-Prolog 8.0.3)","4002":"C (Clang 10.0.0)","4046":"PyPy2 (7.3.0)","4003":"C++ (GCC 9.2.1)","4047":"PyPy3 (7.3.0)","4037":"Objective-C (Clang 10.0.0)","4038":"Common Lisp (SBCL 2.0.3)","4039":"OCaml (4.10.0)"},"submitMethods":[true,true,true]},{"pid":188774,"title":"L","oj":"CodeForces","probNum":"557E","num":"L","publicDescId":1480055191,"publicDescVersion":1687068642000,"properties":[{"title":"Time limit","content":"1500 ms","spoiler":false},{"title":"Mem limit","content":"524288 kB","spoiler":false},{"title":"Source","content":"\u003ca style\u003d\"color: black\" href\u003d\"https://codeforces.com/contest/557\"\u003eCodeforces Round 311 (Div. 2)\u003c/a\u003e","spoiler":true},{"title":"Tags","content":"data structures\ndp\ngraphs\nstring suffix structures\nstrings\ntrees\n*2300","spoiler":true},{"title":"Editorial","content":"\u003ca href\u003d\"https://codeforces.com/blog/entry/18972\" title\u003d\"Codeforces Round #311 (Div. 2)\" target\u003d\"_blank\"\u003eAnnouncement\u003c/a\u003e\n\u003ca href\u003d\"https://codeforces.com/blog/entry/18943\" title\u003d\"Codeforces Round #311 (Div.2) Editorial\" target\u003d\"_blank\"\u003eTutorial\u003c/a\u003e","spoiler":true}],"weight":1,"languages":{"67":"Ruby 3.0.0","28":"D DMD32 v2.101.2","70":"PyPy 3.9.10 (7.3.9, 64bit)","50":"GNU G++14 6.4.0","73":"GNU G++20 11.2.0 (64 bit, winlibs)","51":"PascalABC.NET 3.8.3","52":"Clang++17 Diagnostics","74":"Java 17 64bit","31":"Python 3.8.10","75":"Rust 1.66.0 (2021)","54":"GNU G++17 7.3.0","32":"Go 1.19.5","77":"Kotlin 1.6.10","55":"Node.js 12.16.3","12":"Haskell GHC 8.10.1","34":"JavaScript V8 4.8.0","79":"C# 10, .NET SDK 6.0","13":"Perl 5.20.1","36":"Java 1.8.0_241","59":"Microsoft Visual C++ 2017","19":"OCaml 4.02.1","3":"Delphi 7","4":"Free Pascal 3.0.2","6":"PHP 8.1.7","7":"Python 2.7.18","80":"Clang++20 Diagnostics","9":"C# Mono 6.8","60":"Java 11.0.6","61":"GNU G++17 9.2.0 (64 bit, msys 2)","83":"Kotlin 1.7.20","40":"PyPy 2.7.13 (7.3.0)","41":"PyPy 3.6.9 (7.3.0)","20":"Scala 2.12.8","43":"GNU GCC C11 5.1.0","65":"C# 8, .NET Core 3.1"},"submitMethods":[true,true,true]},{"pid":1312559,"title":"M","oj":"CodeForces","probNum":"916D","num":"M","publicDescId":1292727983,"publicDescVersion":1687142718000,"properties":[{"title":"Time limit","content":"2000 ms","spoiler":false},{"title":"Mem limit","content":"524288 kB","spoiler":false},{"title":"Source","content":"\u003ca style\u003d\"color: black\" href\u003d\"https://codeforces.com/contest/916\"\u003eCodeforces Round 457 (Div. 2)\u003c/a\u003e","spoiler":true},{"title":"Tags","content":"data structures\ninteractive\ntrees\n*2200","spoiler":true},{"title":"Editorial","content":"\u003ca href\u003d\"https://codeforces.com/blog/entry/57192\" title\u003d\"57192\" target\u003d\"_blank\"\u003eAnnouncement \u003cspan class\u003d\"resource-locale\"\u003e(en)\u003c/span\u003e\u003c/a\u003e\n\u003ca href\u003d\"https://codeforces.com/blog/entry/57223\" title\u003d\"Codeforces Round #457 (Div. 2) Editorial\" target\u003d\"_blank\"\u003eTutorial \u003cspan class\u003d\"resource-locale\"\u003e(en)\u003c/span\u003e\u003c/a\u003e","spoiler":true}],"weight":1,"languages":{"67":"Ruby 3.0.0","28":"D DMD32 v2.101.2","70":"PyPy 3.9.10 (7.3.9, 64bit)","50":"GNU G++14 6.4.0","73":"GNU G++20 11.2.0 (64 bit, winlibs)","51":"PascalABC.NET 3.8.3","52":"Clang++17 Diagnostics","74":"Java 17 64bit","31":"Python 3.8.10","75":"Rust 1.66.0 (2021)","54":"GNU G++17 7.3.0","32":"Go 1.19.5","77":"Kotlin 1.6.10","55":"Node.js 12.16.3","12":"Haskell GHC 8.10.1","34":"JavaScript V8 4.8.0","79":"C# 10, .NET SDK 6.0","13":"Perl 5.20.1","36":"Java 1.8.0_241","59":"Microsoft Visual C++ 2017","19":"OCaml 4.02.1","3":"Delphi 7","4":"Free Pascal 3.0.2","6":"PHP 8.1.7","7":"Python 2.7.18","80":"Clang++20 Diagnostics","9":"C# Mono 6.8","60":"Java 11.0.6","61":"GNU G++17 9.2.0 (64 bit, msys 2)","83":"Kotlin 1.7.20","40":"PyPy 2.7.13 (7.3.0)","41":"PyPy 3.6.9 (7.3.0)","20":"Scala 2.12.8","43":"GNU GCC C11 5.1.0","65":"C# 8, .NET Core 3.1"},"submitMethods":[true,true,true]}],"problemsHash":"e3f27312abd40b13c54f82ab058f94e6","privatePeerContestIds":[],"enableTimeMachine":true,"sumTime":true,"penalty":1200,"partialScore":false,"customizedWeight":false,"showPeers":false}</textarea>
+<script defer="" src="/static/bundle/31d6cfe0d16ae931b73c.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body-footer">
+    <div style="margin-bottom: 8px">
+        <a href="https://t.me/joinchat/Erw7nRGwXN3iSCoKguVW3w" target="_blank">
+            <img src="/static/bundle/81a53e5791dde9e8d776.svg">
+        </a>
+        <a href="https://www.facebook.com/virtualjudge/" target="_blank">
+            <img src="/static/bundle/08fef328530ac01d43cb.svg">
+        </a>
+        <a href="https://weibo.com/u/5340553087" target="_blank">
+            <img src="/static/bundle/4ec07d5fa6189551ea12.svg">
+        </a>
+        <a href="https://groups.google.com/forum/#!forum/virtual-judge" target="_blank">
+            <img src="/static/bundle/2f51a7a015f8e4eba210.svg">
+        </a>
+        <a href="https://twitter.com/virtualjudge" target="_blank">
+            <img src="/static/bundle/ac3fbde2ffefc63ff7f6.svg">
+        </a>
+        <a href="mailto:is.un@qq.com" target="_blank">
+            <img src="/static/bundle/a88a4cb619f2d11b4010.svg">
+        </a>
+    </div>
+    All Copyright Reserved © 2010-2023 <a href="mailto:is.un@qq.com">Xu Han</a><br>
+    Server Time: <span class="currentTimeTZ">2023-06-24 07:19:20 BST</span>
+</div>
+
+<input name="systemVersion" type="hidden" value="1687516924914">
+<input name="gaId" type="hidden" value="G-374JLX1715">
+
+
+<i class="fa fa-headphones fa-3x" id="img-support" title="Feedback" style="display: none;"></i>
+<script type="text/javascript">basePath = "";</script>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-374JLX1715"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-374JLX1715', {
+    'user_id': ''
+  });
+  gtag('config', 'UA-13231844-2', {
+    'user_id': ''
+  });
+</script>
+
+
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="loginModalLabel">Login</h4>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <!--<label for="login-username" class="form-control-label">Username:</label>-->
+                        <input type="text" class="form-control" id="login-username" placeholder="Username or Email">
+                    </div>
+                    <div class="form-group">
+                        <!--<label for="login-password" class="form-control-label">Password:</label>-->
+                        <input type="password" class="form-control" id="login-password" placeholder="Password">
+                    </div>
+                    <input type="submit" style="display: none">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="alert alert-danger" role="alert" id="login-alert"></div>
+                <button type="button" class="btn btn-secondary float-xs-left" id="btn-forget-password">
+                    Forget Password
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btn-login">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="registerModalLabel">Register</h4>
+            </div>
+            <div class="modal-body">
+                <form id="register-form">
+                    <div class="form-group row">
+                        <label for="register-username" class="col-xs-2 form-control-label">* Username:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control" id="register-username" placeholder="IMPORTANT: Once registered, you can't change it !">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-password" class="col-xs-2 form-control-label">* Password:</label>
+                        <div class="col-xs-10">
+                            <input type="password" class="form-control" id="register-password" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-repeat-password" class="col-xs-2 form-control-label">* Repeat Pass:</label>
+                        <div class="col-xs-10">
+                            <input type="password" class="col-xs-10 form-control" id="register-repeat-password" placeholder="Repeat password above">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-nickname" class="col-xs-2 form-control-label">Nickname:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="col-xs-10 form-control" id="register-nickname" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-school" class="col-xs-2 form-control-label">School:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="col-xs-10 form-control" id="register-school" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-qq" class="col-xs-2 form-control-label">QQ:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="col-xs-10 form-control" id="register-qq" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-email" class="col-xs-2 form-control-label">* Email:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="col-xs-10 form-control" id="register-email" placeholder="Invisible to others. Please fill a real one. You need it after you forget the password.">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-captcha" class="col-xs-2 form-control-label">* Captcha:</label>
+                        <div class="col-xs-10">
+                            <input type="text" class="col-xs-10 form-control" id="register-captcha" placeholder="">
+                            <img src="" id="register-captcha-img">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="register-introduction" class="col-xs-2 form-control-label">Introduction:</label>
+                        <div class="col-xs-10">
+                            <textarea class="col-xs-10 form-control" id="register-introduction" rows="25" placeholder="Your brief introduction in Markdown"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="alert alert-danger" role="alert" id="register-alert"></div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="btn-register">Register</button>
+            </div>
+        </div>
+    </div>
+</div><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-9098591903020457&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1687569525&amp;plat=1%3A8%2C2%3A8%2C3%3A2162688%2C4%3A2162688%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fvjudge.net%2Fcontest%2F545548%3Ffbclid%3DIwAR2XwnPHllKoQUZRAbp53okbRFGqKPEBnWC9B_DJJO23jMimbJ2tlbISzTQ%23rank&amp;ea=0&amp;pra=5&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTE0LjAuNTczNS4xMzQiLFtdLDAsbnVsbCwiNjQiLFtbIk5vdC5BL0JyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMTQuMC41NzM1LjEzNCJdLFsiR29vZ2xlIENocm9tZSIsIjExNC4wLjU3MzUuMTM0Il1dLDBd&amp;dt=1687569525509&amp;bpp=4&amp;bdt=310&amp;idt=254&amp;shv=r20230620&amp;mjsv=m202306160901&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D92048a4a101b3e05-22cb7da994e10076%3AT%3D1687016061%3ART%3D1687569443%3AS%3DALNI_MZ3YHbAkOH-5_WtW_7A1bGZy6r3FA&amp;gpic=UID%3D00000c50c6007f93%3AT%3D1687016061%3ART%3D1687569443%3AS%3DALNI_MZ5GV9eMJsv1kAVM37eEWGQxKEUkQ&amp;nras=1&amp;correlator=4920628230935&amp;frm=20&amp;pv=2&amp;ga_vid=911190065.1687016061&amp;ga_sid=1687569526&amp;ga_hid=1262085117&amp;ga_fc=1&amp;u_tz=360&amp;u_his=2&amp;u_h=768&amp;u_w=1366&amp;u_ah=728&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=755&amp;bih=608&amp;scr_x=0&amp;scr_y=0&amp;eid=44759842%2C42532277%2C42532279%2C44759927%2C44759876%2C31075431%2C44788441&amp;oid=2&amp;pvsid=180339800531562&amp;tmod=301538910&amp;uas=0&amp;nvt=2&amp;ref=https%3A%2F%2Fl.facebook.com%2F&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C728%2C772%2C625&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=33792&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=266" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20230620/r20190131/zrt_lookup.html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" data-adsbygoogle-status="done" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_1" name="aswift_1" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/html/r20230620/r20110914/zrt_lookup.html?fsb=1#RS-0-&amp;adk=1812271808&amp;client=ca-pub-9098591903020457&amp;fa=8&amp;ifi=2&amp;uci=a!2&amp;xpc=CJ0SWH5ssq&amp;p=https%3A//vjudge.net" data-google-container-id="a!2" data-google-query-id="CIrlqLHe2v8CFcQaKwodVqgN5g" data-load-complete="true"></iframe></div></ins>

@@ -1,21 +1,22 @@
-table {
-  border: 2px solid black;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: x-large;
+tr {
+  border: solid;
+  border-width: 1px 0;
+  background-color: aliceblue;
 }
 
 .center {
   width: 100%;
+  font-family: "Trebuchet MS";
 }
 
 th,
 td {
   padding: 8px;
+  text-align: center;
+  font-size: larger;
 }
 
 #heading {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Old English Five", sans-serif;
   text-align: center;
 }

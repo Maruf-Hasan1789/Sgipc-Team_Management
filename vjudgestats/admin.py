@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 
-from .models import recentStandings
+from .models import VjudgeStandings
 
 
-admin.site.register(recentStandings)
+admin.site.register(VjudgeStandings)
