@@ -20,3 +20,13 @@ td {
   font-family: "Old English Five", sans-serif;
   text-align: center;
 }
+
+.linkButton {
+  background-color: blue;
+  color: white;
+  text-align: right;
+  position: relative;
+  font-family: "Old English Five", sans-serif;
+  left: 1150px;
+  top: 2px;
+}

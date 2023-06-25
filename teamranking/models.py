@@ -4,6 +4,8 @@ from django.db import models
 
 
 
+#this model store the information about the current team standings
+
 class teamInformation(models.Model):
     team_name=models.CharField(max_length=200)
     rating=models.IntegerField(default=1500)

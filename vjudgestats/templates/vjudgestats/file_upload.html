@@ -12,16 +12,19 @@
 <link rel="stylesheet" href="{% static 'vjudgestats/file_upload.css' %}" />
 
 <body>
+    <a href="/"><button class="linkButton">Team Standings</button> </a>
+    <a href="/vjudgestandings"><button class="linkButton">Vjudge Standings</button> </a>
     <div class="container" style="text-align:center">
+
 
         <form action="/updaterating" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div style="float: inline-start">
-                <label class="contestname">Contest Name<input type="text" name="ContestName" /></label>
+                <label class="contestname">Contest Name<input type="text" name="ContestName" required="True" /></label>
             </div>
             <div style="display: inline-flex" name="contestNameBox">
                 <label class="labelFileUpload">File Upload <input type="file" name="uploaded_csv_files"
-                        class="resizedTextbox" /> </label>
+                        class="resizedTextbox" required="True" /> </label>
             </div>
             <div style="float: inline-end">
 

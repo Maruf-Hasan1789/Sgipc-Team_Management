@@ -1,13 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
 
 
 <style>
     @import url('https://fonts.cdnfonts.com/css/old-english-five');
 </style>
 <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'teamranking/teamranking.css' %}">
+<link rel="stylesheet" href="{% static 'vjudgestats/vjudge_contest_standings.css' %}">
+
 
 <head>
     <meta charset="UTF-8" />
@@ -16,32 +17,41 @@
 </head>
 
 <body>
-    <h1 id="heading">Vjudge Standings </h1>
+    <div class="vstandings">
 
+        <h1 id="heading">Vjudge Standings </h1>
+        <a href="/"><button class="linkButton">Team Standings</button> </a>
+        <form action="/vjudgestandings" method="POST" class="contest_form">
+            {% csrf_token %}
+            <label name="labelName" for="contest_name">Chose a contest below</label>
+            <select name="contest_name" id="contest_name" class="form-control" required="">
+                <option value="" selected disabled hidden>Select Contest</option>
+                {% for contest in querysets.all_contest %}
+                <option value="{{contest}}">{{contest}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Submit" class="submitButton">
 
-    <form action="/vjudgestandings">
-        <label for="Contest Name">Chose a contest below</label>
-        <select name="contest_name" id="contest_name">
-            {% for query in querysets %}
-            <option value="{{ query.contest_name}}">{{ query.contest_name}}</option>
+        </form>
+        <h1 class="center">{{querysets.contestName}}</h1>
+        <table class="center">
+            <tr>
+                <th>Rank</th>
+                <th>Team Name</th>
+                <th>Score</th>
+                <th>Penalty</th>
+            </tr>
+            {% for contest in querysets.contest_details %}
+            <tr>
+                <td>{{contest.Rank}}</td>
+                <td>{{contest.TeamName}}</td>
+                <td>{{contest.Score}}</td>
+                <td>{{contest.Penalty}}</td>
+            </tr>
             {% endfor %}
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <table class="center">
-        <tr>
-            <th>Rank</th>
-            <th>Team Name</th>
-            <th>Score</th>
-            <th>Penalty</th>
-        </tr>
-        {% for team in all_teams %}
-        <tr>
-
-        </tr>
-        {% endfor %}
-    </table>
+        </table>
+    </div>
 </body>
 
 </html>

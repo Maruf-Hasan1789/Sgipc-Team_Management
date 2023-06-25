@@ -6,7 +6,7 @@ from .models import teamInformation
 
 # Create your views here.
 
-
+#Current standings of the SGIPC Team using ListView
 class Standings(ListView):
     template_name='teamranking/standings.html'
     model=teamInformation
