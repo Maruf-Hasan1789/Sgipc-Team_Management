@@ -7,7 +7,7 @@ Django project for the management of the competitive programming teams of SGIPC,
 
 ## Demo
 
-Insert gif or link to demo
+
 
 
 ## Installation
@@ -24,5 +24,11 @@ Run the requirements.txt file from the virtual environment
     
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/Maruf-Hasan1789/Sgipc-Team_Management/blob/master/Demo/Screenshot%20(35).png)
+![App Screenshot](https://github.com/Maruf-Hasan1789/Sgipc-Team_Management/blob/master/Demo/Screenshot%20(36).png)
+![App Screenshot](https://github.com/Maruf-Hasan1789/Sgipc-Team_Management/blob/master/Demo/Screenshot%20(37).png)
+![App Screenshot](https://github.com/Maruf-Hasan1789/Sgipc-Team_Management/blob/master/Demo/Screenshot%20(38).png)
+
+
+
 
