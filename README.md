@@ -5,7 +5,7 @@ Django project for the management of the competitive programming teams of SGIPC,
 
 
 
-## Demo
+
 
 
 
