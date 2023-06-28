@@ -1,8 +1,7 @@
 
 # Sgipc-Team_Management
 
-Django project for the management of the competitive programming teams of SGIPC,KUET
-
+It's a Django application for the team management of SGIPC,a competitive programming club.A rating system from [TLX online judge](https://tlx.toki.id/ranking/rating-system) is implemented and based upon the practice contest held on [Vjudge](vjudge.net), all participant teams gain or lose rating.The contest standings data is scrapped using Beautiful Soup of python and rating is updated accordingly.
 
 
 
